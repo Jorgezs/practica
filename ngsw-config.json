@@ -35,6 +35,7 @@
         "strategy": "performance",
         "maxSize": 50,
         "maxAge": "1d"
+        
       }
     }
   ]

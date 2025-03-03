@@ -1,0 +1,37 @@
+<article>
+  <section>
+    <div class="table-responsive container">
+      <table  class="table caption-top table-striped table-bordered table-sm">
+        <caption>
+          <h1>Lista de productos <button (click)="nuevo()" class="btn btn-primary">Nuevo</button>
+          </h1>
+        </caption>
+        <thead class="table-dark">
+          <tr>
+            <th>ID:</th>
+            <th>NOMBRE:</th>
+            <th>DESCRIPCIÓN:</th>
+            <th>ACTUALIZAR:</th>
+            <th>ELIMINAR:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngIf="items.length === 0">
+            <td colspan="5">No se encontró ningún dato en la base de datos</td>
+          </tr>
+          <tr *ngFor="let item of items; let i = index">
+            <td>{{ item.id }}</td>
+            <td>{{ item.nombre }}</td>
+            <td>{{ item.descripcion }}</td>
+            <td>
+              <button class="btn btn-primary" (click)="editar(item)">Actualizar</button>
+            </td>
+            <td>
+              <button class="btn btn-danger" (click)="delete(item)">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</article>

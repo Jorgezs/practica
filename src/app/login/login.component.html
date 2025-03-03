@@ -1,0 +1,31 @@
+<!-- <p>login works!</p>
+<div  class="card">
+  <div class="card-body">
+    <form (ngSubmit)="ngOnInit()">
+      <div class="mb-2">
+        <label for="" class="form-label">
+          Usuario:
+        </label>
+<input type="text" class="form-control" id="usuario" placeholder="Ingresa tu usuario">
+
+      </div>
+      <div class="mb-2" >
+        <label for="" class="form-label">
+          Contraseña:
+        </label>
+<input type="text" class="form-control" id="contraseña" placeholder="Ingresa tu contraseña">
+
+
+
+      </div>
+      <button class="btn btn-primary"> Ingresar</button>
+    </form>
+  </div>
+</div> -->
+
+<h1>post</h1>
+<ul class="btn btn-primary">
+  @for (post of posts$ | async; track post.nombre) {
+    <li>{{post.nombre}}</li>
+  }
+</ul>

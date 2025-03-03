@@ -1,0 +1,28 @@
+<h1>Actualizar</h1>
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="editForm">
+      <div class="mb-2">
+        <label class="form-label"> Nombre: </label>
+        <input id="nombre" type="text" class="form-control" placeholder="Ingresa el nombre" formControlName="nombre">
+      </div>
+      <div class="mb-2">
+        <label class="form-label"> Descripción: </label>
+        <input id="descripcion" class="form-control" placeholder="Ingresa la Descripción" formControlName="descripcion">
+      </div>
+      <button class="btn btn-primary" (click)="actualizar()">Confirmar</button>
+    </form>
+
+    <article *ngIf="activado">
+      <dialog open>
+        <article>
+          <section>
+            <h2>Actualizado correctamente</h2>
+            <p>El usuario {{ item.nombre }} con la descripción "{{ item.descripcion }}" fue editado</p>
+            <button class="btn btn-success" (click)="cerrarModal()">Cerrar</button>
+          </section>
+        </article>
+      </dialog>
+    </article>
+  </div>
+</div>

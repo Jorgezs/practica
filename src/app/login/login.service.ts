@@ -15,6 +15,7 @@ getPosts(){
   return this.http.get<Post[]>(this.API_URL);
 }
 //
+//
 //   ingresar1( usuario1: string, contraseña1: string){
 // // console.log("llegaron los datos" + usuario1 + contraseña1);
 // return this.http.post(`${this.API_URL}/datos.json`,{
